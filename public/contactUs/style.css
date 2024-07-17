@@ -1,0 +1,133 @@
+/* HEADER PART */
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to bottom, #00000069, #00000038),
+    url(/imgs/contactUs/contactus2.jpg) center/cover no-repeat;
+}
+.header h1 {
+  font-size: 30px;
+  font-weight: bold;
+  /* margin-top: 25vh; */
+}
+.header p {
+  color: var(--clr-grey-lighter);
+  font-weight: bold;
+  margin-bottom: 1rem;
+  width: 80%;
+}
+/* the searchbar media queri is in the searcBar.css */
+@media (min-width: 768px) {
+  .header h1 {
+    font-size: 55px;
+  }
+  .header p {
+    font-size: 20px;
+  }
+}
+.getInTouch {
+  background: none;
+}
+.formContainer {
+  width: 100%;
+  border: 0.1px solid transparent;
+}
+.formContainer form {
+  width: 90%;
+  background: var(--clr-black-opLow);
+  margin-block: 100px;
+
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 7px;
+  transition: all 0.3s linear;
+}
+.formContainer form h1 {
+  font-size: 25px;
+  font-weight: 800;
+  margin-top: 2rem;
+}
+.formContainer form div {
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+}
+.margin-bottom2 {
+  margin-bottom: 2rem;
+}
+.formContainer form button {
+  width: 8rem;
+}
+.formContainer form input,
+.formContainer form textarea {
+  border-radius: 7px;
+  outline: none;
+  padding-left: 10px;
+  font-size: 1.2rem;
+}
+.formContainer form input {
+  height: 2.5rem;
+}
+@media (min-width: 768px) {
+  .formContainer form {
+    width: 50%;
+    margin-left: 5%;
+  }
+}
+@media (min-width: 768px) {
+  .formContainer form {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.footer {
+  margin-top: 0;
+}
+.places {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+.places div:nth-of-type(1) {
+  background: linear-gradient(to bottom, #00000069, #00000038),
+    url(/imgs/contactUs/california.jpeg) center/cover no-repeat;
+  height: 60vh;
+  color: white;
+}
+.places div:nth-of-type(2) {
+  background: linear-gradient(to bottom, #00000069, #00000038),
+    url(/imgs/contactUs/london.jpg) center/cover no-repeat;
+  height: 60vh;
+  color: white;
+}
+.places div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.places div h1 {
+  font-size: 35px;
+  font-weight: 700;
+}
+.places div p {
+  font-size: 20px;
+  width: 90%;
+}
+@media (min-width: 768px) {
+  .places {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

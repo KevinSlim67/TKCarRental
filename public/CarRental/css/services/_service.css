@@ -1,0 +1,79 @@
+.service {
+  display: flex;
+  flex-direction: column;
+}
+.service .photo {
+  width: 100%;
+  height: 100vh;
+}
+.service .rentalPhoto {
+  background: url(/CarRental/images/services/rental.jpg) center/cover no-repeat;
+}
+.service .limosinePhoto {
+  background: url(/CarRental/images/services/limosine.jpg) center/cover
+    no-repeat;
+}
+.service .partiesPhoto {
+  background: url(/CarRental/images/services/party.jpg) center/cover no-repeat;
+}
+.service .description {
+  width: 90%;
+
+  margin: 3rem auto;
+}
+.service .description h1 {
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.service .description p {
+  color: var(--clr-grey-darker);
+  margin-bottom: 1.2rem;
+}
+.service button {
+  padding: 10px 20px;
+}
+@media (min-width: 768px) {
+  .service .photo {
+    height: 100%;
+    width: 50vw;
+  }
+  .service .description {
+    width: 50vw;
+  }
+  .service .description * {
+    margin: 0 2rem;
+  }
+
+  /* .service {
+    display: grid;
+    grid-template-areas: "one two";
+  } */
+  .service {
+    display: grid;
+    grid-template-areas: "one two";
+  }
+  .service.carRental .description {
+    grid-area: two;
+  }
+  .service.carRental .photo {
+    grid-area: one;
+    border-bottom-right-radius: 4px;
+  }
+  .limosine .description {
+    grid-area: one;
+  }
+  .limosine .photo {
+    grid-area: two;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+  }
+  .parties .description {
+    grid-area: two;
+  }
+  .parties .photo {
+    grid-area: one;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+}

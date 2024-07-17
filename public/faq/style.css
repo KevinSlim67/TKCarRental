@@ -1,0 +1,208 @@
+/* HEADER PART */
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to bottom, #00000069, #00000038),
+    url(/imgs/main/header.jpg) center/cover no-repeat;
+}
+.header h1 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 25vh;
+}
+.header p {
+  color: var(--clr-grey-lighter);
+  font-weight: bold;
+  margin-bottom: 1rem;
+  width: 80%;
+}
+/* the searchbar media queri is in the searcBar.css */
+@media (min-width: 768px) {
+  .header h1 {
+    font-size: 55px;
+  }
+  .header p {
+    font-size: 20px;
+  }
+}
+.question-container {
+  margin-bottom: 19px;
+  background-color: white;
+  border-radius: 7px;
+  padding: 2rem 0 1rem 0;
+
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: 1px solid var(--clr-grey-lighter);
+}
+.question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* .question h3 {
+  font-size: 25px;
+} */
+.faqs h1 {
+  font-size: 25px;
+  font-weight: bold;
+  margin-left: 1rem;
+  margin-top: 2rem;
+}
+.question h3 {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 2rem;
+}
+.text {
+  border-top: 2px solid var(--clr-grey-lighter);
+  padding-top: 14px;
+  margin-top: 18px;
+}
+.btn i {
+  font-size: 22px;
+  color: var(--clr-gold);
+  transition: transform 0.3s ease;
+}
+.btn i:hover {
+  transform: rotate(90deg);
+}
+.minus-btn {
+  display: none;
+}
+.text {
+  display: none;
+}
+.question-container.show-text {
+  border-bottom: none;
+}
+.show-text .text {
+  display: block;
+}
+.show-text .plus-btn {
+  display: none;
+}
+.show-text .minus-btn {
+  display: inline;
+}
+
+.more-info {
+  border: 2px solid var(--clr-grey-lighter);
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 7px;
+}
+.more-info h1,
+.more-info .phone-clock {
+  width: 90%;
+
+  margin: 2rem auto;
+}
+.more-info .phone-clock {
+  display: flex;
+  flex-direction: column;
+  gap: 1.7rem;
+}
+.more-info h1 {
+  font-size: 18px;
+  font-weight: 600;
+  border-bottom: 2px solid var(--clr-grey-lighter);
+}
+.more-info i {
+  margin-right: 0.6rem;
+}
+.formContainer form {
+  margin-bottom: 2rem !important;
+}
+@media (min-width: 768px) {
+  .questions {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+  .faqs {
+  }
+}
+.getInTouch {
+  background: linear-gradient(to bottom, #00000069, #00000038),
+    url(/imgs/aboutUs/form.jpg) center/cover no-repeat;
+}
+.formContainer {
+  width: 100%;
+  border: 0.1px solid transparent;
+}
+.formContainer form {
+  width: 90%;
+  background: var(--clr-black-opLow);
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 7px;
+  transition: all 0.3s linear;
+}
+.formContainer form h1 {
+  font-size: 25px;
+  font-weight: 800;
+  margin-top: 2rem;
+}
+.formContainer form div {
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+}
+.margin-bottom2 {
+  margin-bottom: 2rem;
+}
+.formContainer form button {
+  width: 8rem;
+}
+.formContainer form input,
+.formContainer form textarea {
+  border-radius: 7px;
+  outline: none;
+  padding-left: 10px;
+  font-size: 1.2rem;
+}
+.formContainer form input {
+  height: 2.5rem;
+}
+@media (min-width: 768px) {
+  .formContainer form {
+    width: 50%;
+    margin-left: 5%;
+  }
+}
+.formContainer form {
+  background: none;
+  color: black;
+  border: 2px solid var(--clr-grey-lighter);
+}
+.formContainer form input,
+.formContainer form textarea {
+  border: 2px solid var(--clr-grey-lighter);
+}
+.formContainer form h1 {
+  margin-bottom: 2rem;
+  border-bottom: 2px solid var(--clr-grey-lighter);
+  font-size: 20px;
+}
+@media (min-width: 768px) {
+  .formContainer form {
+    width: 90%;
+    margin: 1.7rem auto 0 auto;
+  }
+}

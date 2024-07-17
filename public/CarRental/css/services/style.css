@@ -1,0 +1,8 @@
+@import "/CarRental/css/general/_generalRules.css";
+@import "/CarRental/css/general/_navbar.css";
+@import "/CarRental/css/home/_header.css";
+@import "/CarRental/css/general/_footer.css";
+@import "/CarRental/css/components/_btnRipple.css";
+@import "/CarRental/css/services/_headerOverrides.css";
+@import "/CarRental/css/home/_whychooseUs.css";
+@import "/CarRental/css/services/_service.css";

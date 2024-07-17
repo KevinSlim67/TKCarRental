@@ -1,0 +1,35 @@
+POST http://localhost:5000/form/form-login
+ Content-Type: application/json,
+ {
+  email: "john@example.com",
+  password: "P@ssw0rd"
+}
+
+### 
+POST http://localhost:5000/form/form-login HTTP/1.1
+Content-Type: application/json
+
+ {
+  "email": "rita@yahoo.com",
+  "password": "12R"
+}
+### 
+POST http://localhost:5000/form/form-submission HTTP/1.1
+Content-Type: application/json
+
+ {
+  "fullName":"rita",
+  "phone":"123331",
+  "email": "rita@yahoo.com",
+  "password": "12R"
+}
+POST http://localhost:5000/form/form-submission HTTP/1.1
+Content-Type: application/json
+
+ {
+  "fullName":"rita",
+  "phone":"123331",
+  "email": "rita@yahoo.com",
+  "password": "12R"
+}
+

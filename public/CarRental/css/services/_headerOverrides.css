@@ -1,0 +1,4 @@
+.header {
+  background: linear-gradient(to bottom, #00000069, #00000038),
+    url(/CarRental/images/services/header.jpg) center/cover no-repeat;
+}

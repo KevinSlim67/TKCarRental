@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>purchase a car</title>
+    <link rel="stylesheet" href="/global.css" type="text/css" />
+    <link rel="stylesheet" href="/purchaseCar/style.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <script src="/./global.js" defer></script>
+    <script src="/./purchaseCar/purchaseCar.js" defer></script>
+  </head>
+  <body>
+    <div class="nav-menu">
+      <div class="closeBtn">
+        <i class="fas fa-x"></i>
+      </div>
+      <ul class="menu-list">
+        <li><a href="/">Home</a></li>
+        <li><a href="/cars">Cars</a></li>
+        <li><a href="/aboutUs">About Us</a></li>
+        <li><a href="/services">Services</a></li>
+        <li><a href="/contactUs">Contact Us</a></li>
+        <li><a href="/faq">FAQ's</a></li>
+        <li><a href="/gallery">gallery</a></li>
+      </ul>
+      <h1>For More Informations</h1>
+      <div class="phone-clock">
+        <span><i class="fa-solid fa-phone"></i>+96170495664</span>
+        <span><i class="fa-regular fa-clock"></i>Mon-Fri 09.00 - 17.00</span>
+      </div>
+      <ul class="nav-socials">
+        <i class="fa-brands fa-square-facebook"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-youtube"></i>
+        <i class="fa-brands fa-pinterest"></i>
+        <i class="fa-brands fa-instagram"></i>
+      </ul>
+    </div>
+    <div class="page-container">
+      <nav class="navbar">
+        <!-- THE UPPER NAVBAR OF CONTACTS -->
+        <div class="nav-contact">
+          <ul class="nav-socials">
+            <i class="fa-brands fa-square-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-pinterest"></i>
+            <i class="fa-brands fa-instagram"></i>
+          </ul>
+          <div class="nav-location">
+            <span
+              ><i class="fa-solid fa-location-dot"></i>184 Main Street East
+              8007</span
+            >
+          </div>
+          <div class="phone-clock">
+            <span><i class="fa-solid fa-phone"></i>+96170495664</span>
+            <span
+              ><i class="fa-regular fa-clock"></i>Mon-Fri 09.00 - 17.00</span
+            >
+          </div>
+        </div>
+        <!-- END OF NAV CONTACT -->
+        <div class="main-navBar">
+          <h1 class="title">TCarRental</h1>
+          <ul class="menu-list">
+            <li><a href="/">Home</a></li>
+            <li><a href="/cars">Cars</a></li>
+            <li><a href="/aboutUs">About Us</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/contactUs">Contact Us</a></li>
+            <li><a href="/faq">FAQ's</a></li>
+            <li><a href="/gallery">gallery</a></li>
+          </ul>
+          <div class="hamburger">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </div>
+      </nav>
+      <header class="header">
+        <div class="header-container">
+          <div class="photoVids">
+            <button class="photo">
+              <i class="fa-solid fa-camera-retro"></i>View Photos
+            </button>
+
+            <button class="video">
+              <i class="fa-solid fa-video"></i>Video review
+            </button>
+          </div>
+
+          <div class="headerprice"></div>
+        </div>
+      </header>
+
+      <!-- ****************8
+
+      start info section  
+
+
+      ********************* -->
+      <section class="info">
+        <div class="carInfo">
+          <!-- //fill from js -->
+        </div>
+        <div class="formInfo">
+          <form id="purchase-car-form">
+            <div>
+              <label for="fullName">Full Name</label>
+              <input
+                type="text"
+                name="name"
+                id="fullName"
+                placeholder="Tony Dagher"
+                required
+              />
+            </div>
+            <div>
+              <label for="EmailAdress">Email Adress</label>
+              <input
+                type="email"
+                name="email"
+                id="EmailAdress"
+                placeholder="tonyD@hotmail.com"
+                required
+              />
+            </div>
+            <div>
+              <label for="PhoneNumber">Phone Number</label>
+              <input
+                type="text"
+                name="phone"
+                id="PhoneNumber"
+                placeholder="+96170495664"
+                required
+              />
+            </div>
+            <div>
+              <label for="pickUpAddress">PickUp Adress</label>
+              <input
+                type="text"
+                name="pickUpAddress"
+                id="pickUpAddress"
+                placeholder="34 Main plaza road"
+                required
+              />
+            </div>
+            <div>
+              <label for="pickUpDate">PickUp Date</label>
+              <input type="date" name="pickUpDate" id="pickUpDate" required />
+            </div>
+            <div>
+              <label for="pickUpTime">PickUp Time</label>
+              <input type="time" name="pickUpTime" id="pickUpTimes" required />
+            </div>
+            <div>
+              <label for="dropOffAddress">dropOff Adress</label>
+              <input
+                type="text"
+                name="dropOffAddress"
+                id="dropOffAddress"
+                placeholder="dubai Airport"
+                required
+              />
+            </div>
+            <div>
+              <label for="dropOffDate">dropOff Date</label>
+              <input type="date" name="dropOffDate" id="dropOffDate" required />
+            </div>
+            <div>
+              <label for="dropOffTime">dropOff Time</label>
+              <input
+                type="time"
+                name="dropOffTime"
+                id="dropOffTimes"
+                required
+              />
+            </div>
+            <div class="error">
+              <p id="errorContainer"></p>
+            </div>
+            <div>
+              <button id="requestBooking" name="requestBooking">
+                Request For Booking
+              </button>
+            </div>
+            <div class="orDiv">
+              <p>OR</p>
+            </div>
+            <div>
+              <button class="btnRipple" id="bookInstantly" name="bookInstantly">
+                <span>Book instantly</span>
+              </button>
+            </div>
+            <div class="timesViewed">
+              <p>This car's been viewed 544 times in the past week</p>
+              <i class="fas fa-clock"></i>
+            </div>
+          </form>
+          <div class="shareThisCar">
+            <i class="fa-solid fa-envelope"></i>
+            <span>Share This Car</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ************
+
+      section  similar cars
+
+
+      *********** -->
+      <section class="similarCars">
+        <h1>Similar Cars</h1>
+
+        <div class="container">
+          <div class="grid active">
+            <!-- fill from js -->
+          </div>
+        </div>
+      </section>
+      <!-- *****************
+
+      footer 
+
+**************************** -->
+      <footer class="footer">
+        <div class="footer-info">
+          <div>
+            <h2>About Us</h2>
+            <p>
+              Getting dressed up and traveling with good friends makes for a
+              shared, unforgettable experience.
+            </p>
+            <h1 class="title">TCarRental</h1>
+          </div>
+          <div class="footer-contactUs">
+            <h2>Contact Info</h2>
+            <div>
+              <i class="fa-solid fa-location-dot"></i>
+              <span>184 Main Street East 8007</span>
+            </div>
+            <div>
+              <i class="fa-solid fa-phone"></i>
+              <span>+96170495664</span>
+            </div>
+            <div>
+              <i class="fa-regular fa-clock"></i>
+              <span>Mon-Fri 09.00 - 17.00</span>
+            </div>
+          </div>
+          <div>
+            <ul class="footer-socials">
+              <i class="fa-brands fa-facebook-f"></i>
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-brands fa-youtube"></i>
+              <i class="fa-brands fa-pinterest"></i>
+              <i class="fa-brands fa-instagram"></i>
+            </ul>
+          </div>
+          <div class="Newsletter">
+            <h2>Newsletter</h2>
+            <p>Don't miss a thing! Sign up to receive daily deals</p>
+            <form id="subscibeForm">
+              <input
+                type="email"
+                placeholder="Your Email Address"
+                id="emailSubscribe"
+                required
+              />
+              <div>
+                <button id="subscribeBtn" class="btnRipple">
+                  <span>Subscribe</span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="footer-nav">
+          <ul class="footer-menu-list">
+            <li><a href="/cars">Cars</a></li>
+            <li><a href="/aboutUs">About Us</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/contactUs">Contact Us</a></li>
+            <li><a href="/faq">FAQ's</a></li>
+          </ul>
+          <div class="copyrights">
+            <p>
+              &copy; Copyright Grand Car Rental Theme - Theme by Tony Dagher
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- <script src="https://www.youtube.com/iframe_api"></script> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  </body>
+</html>

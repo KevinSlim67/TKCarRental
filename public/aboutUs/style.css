@@ -1,0 +1,320 @@
+/* HEADER PART */
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to bottom, #00000069, #00000038),
+    url(/imgs/aboutUs/headerImg.jpg) center/cover no-repeat;
+}
+.header h1 {
+  font-size: 30px;
+  font-weight: bold;
+}
+.header p {
+  color: var(--clr-grey-lighter);
+  font-weight: bold;
+  margin-bottom: 1rem;
+  width: 80%;
+}
+/* the searchbar media queri is in the searcBar.css */
+@media (min-width: 768px) {
+  .header h1 {
+    font-size: 55px;
+  }
+  .header p {
+    font-size: 20px;
+  }
+}
+.someInfo {
+  background-color: var(--clr-lighter-blue);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+.someInfo * {
+  width: 94%;
+}
+.someInfo > h1 {
+  font-size: 23px;
+  font-weight: 800;
+  line-height: 27px;
+  margin-bottom: 2rem;
+}
+.someInfo > p {
+  margin-bottom: 2rem;
+}
+.numbers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.numbers h1 {
+  font-size: 50px;
+}
+.numbers p {
+  color: var(--clr-grey-lighter);
+}
+.tripsContainer {
+  margin-bottom: 1rem;
+}
+.happyCusContainer {
+  margin-bottom: 6rem;
+}
+@media (min-width: 768px) {
+  .numbers {
+    flex-direction: row;
+
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+  }
+  .happyCusContainer,
+  .tripsContainer {
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+  }
+}
+.getInTouch {
+  background: linear-gradient(to bottom, #00000069, #00000038),
+    url(/imgs/aboutUs/form.jpg) center/cover no-repeat;
+}
+.formContainer {
+  width: 100%;
+  border: 0.1px solid transparent;
+}
+.formContainer form {
+  width: 90%;
+  background: var(--clr-black-opLow);
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 7px;
+  transition: all 0.3s linear;
+}
+.formContainer form h1 {
+  font-size: 25px;
+  font-weight: 800;
+  margin-top: 2rem;
+}
+.formContainer form div {
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+}
+.margin-bottom2 {
+  margin-bottom: 2rem;
+}
+.formContainer form button {
+  width: 8rem;
+}
+.formContainer form input,
+.formContainer form textarea {
+  border-radius: 7px;
+  outline: none;
+  padding-left: 10px;
+  font-size: 1.2rem;
+}
+.formContainer form input {
+  height: 2.5rem;
+}
+@media (min-width: 768px) {
+  .formContainer form {
+    width: 50%;
+  }
+}
+.ourTeam h1 {
+  font-size: 25px;
+  font-weight: 800;
+  margin-top: 2rem;
+  text-align: center;
+}
+.ourTeam p {
+  color: var(--clr-grey-darker);
+  text-align: center;
+}
+.carousel {
+  position: relative;
+  height: 500px;
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 20px;
+  margin-top: -2.2rem;
+}
+.carousel__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.carousel__slide .description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 10%;
+}
+
+.carousel__slide .description h2 {
+  margin-top: 1rem;
+  font-size: 20px;
+  font-weight: 800;
+}
+.carousel__slide .description p {
+  color: var(--clr-grey-darker);
+}
+.carousel__image {
+  height: 20rem;
+  width: 20rem;
+  border-radius: 50%;
+}
+.carousel__slide div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 100%;
+  width: 100%;
+}
+.carousel__track-container {
+  height: 100%;
+
+  position: relative;
+  overflow: hidden; /* when u translate to the left side you dont overflow over the parent div*/
+}
+.carousel__track {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: relative;
+  height: 100%;
+  transition: transform 250ms ease-in; /*this transform is done in js*/
+}
+
+.carousel__slide {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.carousel_button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+.carousel_button img {
+  width: 30px;
+}
+.carousel__button--left {
+  left: -40px;
+}
+.carousel__button--right {
+  right: -40px;
+}
+.carousel__nav {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  margin-top: -2rem;
+}
+.carousel__indicator {
+  border: 0;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background: black;
+  background: rgba(0, 0, 0, 0.3);
+  margin: 0 12px;
+  cursor: pointer;
+}
+.carousel__indicator.current-slide {
+  background: rgba(0, 0, 0, 0.5);
+}
+.is-hidden {
+  display: none;
+}
+
+.description {
+  margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .carousel__image {
+    height: 26rem;
+    width: 25rem;
+  }
+  .carousel {
+    width: 70%;
+    margin-top: 0;
+  }
+  .carousel_button img {
+    width: 40px;
+  }
+  .carousel__slide .description p {
+    margin-bottom: 4rem;
+    font-size: 20px;
+  }
+  .carousel__slide .description {
+    height: 20%;
+  }
+  .carousel__slide .description h2 {
+    padding-top: 3rem;
+    font-size: 25px;
+  }
+
+  .footer {
+    margin-top: 4rem;
+  }
+  .carousel__nav {
+    margin-top: 0;
+  }
+  .ourTeam h1 {
+    font-size: 30px;
+  }
+}
+@media (min-width: 1100px) {
+  .carousel {
+    width: 60%;
+  }
+  .carousel_button img {
+    width: 45px;
+  }
+}
+
+
+.someInfo {
+  padding-block: 100px;
+}
+
+.getInTouch {
+  padding-block: 100px;
+
+  form {
+    margin-block: 0;
+  }
+}
+
+.ourTeam {
+  padding-block: 100px;
+
+  h1 {
+    margin-top: 0;
+  }
+}

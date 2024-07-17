@@ -1,0 +1,225 @@
+@import "/CarRental/css/general/_generalRules.css";
+@import url("https://fonts.googleapis.com/css2?family=Island+Moments&family=Permanent+Marker&display=swap");
+.navbar {
+  position: fixed;
+  width: 100%;
+  color: white;
+  font-size: 14px;
+  word-spacing: 0.1rem;
+  z-index: 1000;
+}
+.navbar i {
+  margin-right: 0.5rem;
+}
+.nav-contact {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  align-items: center;
+  gap: 1.4rem;
+  white-space: nowrap;
+}
+.nav-contact ul {
+  margin-top: 1rem;
+}
+.nav-contact .phone-clock {
+  margin-bottom: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-socials i {
+  background-color: transparent;
+  color: white;
+  transition: 0.3s;
+}
+.nav-socials i:hover {
+  color: var(--clr-light-blue);
+}
+.nav-location span i,
+.phone-clock span i {
+  color: var(--clr-primary-blue);
+}
+.main-navBar {
+  background-color: rgba(0, 0, 0, 0.425);
+}
+.title {
+  font-family: "Island Moments", cursive;
+
+  font-size: 50px;
+}
+
+/* NOW ON BIGGER SCREEN */
+
+@media (min-width: 768px) {
+  .nav-contact {
+    flex-direction: row;
+    align-items: center;
+    white-space: nowrap;
+
+    height: 50px;
+  }
+  .nav-contact .nav-socials {
+    order: 3;
+    margin-right: 4%;
+    margin-left: auto;
+    margin-top: 0;
+  }
+  .nav-contact .nav-location {
+    order: 1;
+    margin-left: 4%;
+    margin-right: 4%;
+  }
+  .nav-contact .phone-clock {
+    order: 2;
+    margin-bottom: 0;
+    margin-top: 0;
+    margin-right: 3%;
+  }
+  .phone-clock span:nth-of-type(1) {
+    margin-right: 8%;
+  }
+}
+@media (min-width: 985px) {
+  .nav-contact .nav-location {
+    margin-left: 8%;
+  }
+  .nav-contact .nav-socials {
+    margin-right: 8%;
+  }
+  .phone-clock span:nth-of-type(1) {
+    margin-right: 10%;
+  }
+}
+
+/* START OF MAIN NAVBAR  */
+
+.main-navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hamburger i {
+  font-size: 30px;
+  transition: color 0.3s ease;
+}
+.hamburger i:hover {
+  color: var(--clr-primary-blue);
+}
+
+.nav-menu {
+  position: fixed;
+  top: 0;
+  right: -50%;
+  width: 50%;
+  background-color: rgba(0, 0, 0, 0.705);
+  transition: 0.4s;
+  padding: 30px 0;
+  height: 100vh;
+  color: white;
+  overflow-y: scroll;
+  z-index: 1000;
+}
+.nav-menu.active {
+  right: 0;
+}
+.nav-menu .closeBtn {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 70%;
+  background-color: var(--clr-primary-blue);
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+.nav-menu .closeBtn:hover {
+  transform: translateY(-5px);
+}
+.nav-menu .closeBtn i {
+  font-size: 25px;
+  margin-right: 0;
+}
+.menu-list {
+  display: flex;
+  flex-direction: column;
+  margin-left: 9%;
+  gap: 1rem;
+}
+.menu-list a {
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  transition: 0.5s;
+}
+.menu-list a:hover {
+  color: var(--clr-primary-blue);
+}
+.menu-list li {
+  transition: 0.5s;
+}
+.menu-list li:hover {
+  transform: translateY(-4px);
+}
+.nav-menu h1 {
+  margin-top: 4rem;
+  margin-left: 9%;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 0.9rem;
+}
+.nav-menu .phone-clock {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: 9%;
+  margin-bottom: 4rem;
+}
+
+.nav-menu .nav-socials {
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.nav-menu .nav-socials i:hover {
+  color: var(--clr-primary-blue);
+}
+.main-navBar > * {
+  margin: 0 15px;
+}
+.blur {
+  -webkit-filter: blur(10px);
+  -moz-filter: blur(10px);
+  -ms-filter: blur(10px);
+  filter: blur(10px);
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+.hide {
+  display: none;
+}
+
+/* menu list that is in the main navbar on big screen */
+.main-navBar .menu-list {
+  flex-direction: row;
+  display: none;
+}
+.main-navBar .menu-list li a {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+  .main-navBar .menu-list {
+    display: flex;
+  }
+}

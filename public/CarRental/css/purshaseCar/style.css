@@ -1,0 +1,10 @@
+@import "/CarRental/css/general/_generalRules.css";
+@import "/CarRental/css/general/_navbar.css";
+@import "/CarRental/css/general/_searchBar.css";
+@import "/CarRental/css/components/_btnRipple.css";
+@import "/CarRental/css/home/_header.css";
+@import "/CarRental/css/general/_footer.css";
+@import "/CarRental/css/purshaseCar/_headerOverrides.css";
+@import "/CarRental/css/purshaseCar/_info.css";
+@import "/CarRental/css/cars/_carsGrid.css";
+@import "/CarRental/css/purshaseCar/_similarCars.css";

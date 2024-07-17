@@ -1,0 +1,34 @@
+.btnRipple {
+  background-color: var(--clr-primary-blue);
+
+  height: 45px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  border: none;
+}
+
+.btnRipple::before {
+  content: "";
+  position: absolute;
+  background-color: var(--clr-violet);
+  width: 0;
+  height: 0;
+
+  left: var(--xPos);
+  top: var(--yPos);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  transition: width 0.5s, height 0.5s;
+}
+.btnRipple:hover::before {
+  width: 1400px;
+  height: 300px;
+}
+.btnRipple span {
+  position: relative;
+  z-index: 1;
+  font-size: 16px;
+}

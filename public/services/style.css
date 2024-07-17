@@ -1,0 +1,181 @@
+/* HEADER PART */
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to bottom, #00000069, #00000038),
+    url(/imgs/services/header.jpg) center/cover no-repeat;
+}
+.header h1 {
+  font-size: 30px;
+  font-weight: bold;
+  /* margin-top: 25vh; */
+}
+.header p {
+  color: var(--clr-grey-lighter);
+  font-weight: bold;
+  margin-bottom: 1rem;
+  width: 80%;
+}
+/* the searchbar media queri is in the searcBar.css */
+@media (min-width: 768px) {
+  .header h1 {
+    font-size: 55px;
+  }
+  .header p {
+    font-size: 20px;
+  }
+}
+.service {
+  display: flex;
+  flex-direction: column;
+}
+.service .photo {
+  width: 100%;
+  height: 100vh;
+}
+.service .rentalPhoto {
+  background: url(/imgs/services/rental.jpg) center/cover no-repeat;
+}
+.service .limosinePhoto {
+  background: url(/imgs/services/limosine.jpg) center/cover no-repeat;
+}
+.service .partiesPhoto {
+  background: url(/imgs/services/party.jpg) center/cover no-repeat;
+}
+.service .description {
+  width: 90%;
+
+  margin: 100px auto;
+}
+.service .description h1 {
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.service .description p {
+  color: var(--clr-grey-darker);
+  margin-bottom: 1.2rem;
+}
+.service button {
+  padding: 10px 20px;
+}
+@media (min-width: 768px) {
+  .service .photo {
+    height: 100%;
+    width: 50vw;
+  }
+  .service .description {
+    width: 50vw;
+  }
+  .service .description * {
+    margin: 0 2rem;
+  }
+
+  /* .service {
+    display: grid;
+    grid-template-areas: "one two";
+  } */
+  .service {
+    display: grid;
+    grid-template-areas: "one two";
+  }
+  .service.carRental .description {
+    grid-area: two;
+  }
+  .service.carRental .photo {
+    grid-area: one;
+    border-bottom-right-radius: 4px;
+  }
+  .limosine .description {
+    grid-area: one;
+  }
+  .limosine .photo {
+    grid-area: two;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+  }
+  .parties .description {
+    grid-area: two;
+  }
+  .parties .photo {
+    grid-area: one;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+}
+.whyChooseUs {
+  width: 100%;
+
+  background-color: var(--clr-lighter-blue);
+  color: white;
+
+  text-align: center;
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.whyChooseUs h1 {
+  font-size: 25px;
+  margin-top: 2rem;
+  font-weight: 800;
+}
+.whyChooseUs p {
+  color: var(--clr-grey-lighter);
+  width: 95%;
+}
+.whyChooseUs h2 {
+  font-size: 20px;
+  font-weight: 800;
+}
+.reasons {
+  display: flex;
+  flex-direction: column;
+}
+.reasons div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+  gap: 0.8rem;
+}
+.reasons img {
+  width: 60px;
+  height: 60px;
+}
+.filter-white {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(202deg)
+    brightness(101%) contrast(105%);
+}
+/* this is used to filter the color (change the color of any svg ) */
+@media (min-width: 768px) {
+  .reasons {
+    flex-direction: row;
+    padding: 0 1rem;
+    gap: 10px;
+  }
+  .reasons div:nth-of-type(3) {
+    padding-top: 1.6rem;
+  }
+}
+@media (min-width: 1000px) {
+  .reasons div:nth-of-type(3) {
+    padding-top: 0;
+  }
+}
+
+.whyChooseUs {
+  padding-block: 100px;
+
+  h1 {
+    margin-top: 0;
+  }
+}

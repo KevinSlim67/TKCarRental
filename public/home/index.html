@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Main page</title>
+    <link rel="stylesheet" href="/global.css" type="text/css" />
+    <link rel="stylesheet" href="/home/style.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <script src="/./global.js" defer></script>
+    <script src="/./home/main.js" defer></script>
+  </head>
+  <body>
+    <!-- *******************
+
+    START OF THE NAVBAR 
+
+
+    ******************** -->
+    <div class="nav-menu">
+      <div class="closeBtn">
+        <i class="fas fa-x"></i>
+      </div>
+      <ul class="menu-list">
+        <li><a href="/">Home</a></li>
+        <li><a href="/cars">Cars</a></li>
+        <li><a href="/aboutUs">About Us</a></li>
+        <li><a href="/services">Services</a></li>
+        <li><a href="/contactUs">Contact Us</a></li>
+        <li><a href="/faq">FAQ's</a></li>
+        <li><a href="/gallery">gallery</a></li>
+        <li><i class="fa-solid fa-right-from-bracket logoutBtn"></i></li>
+      </ul>
+      <h1>For More Informations</h1>
+      <div class="phone-clock">
+        <span><i class="fa-solid fa-phone"></i>+96170495664</span>
+        <span><i class="fa-regular fa-clock"></i>Mon-Fri 09.00 - 17.00</span>
+      </div>
+      <ul class="nav-socials">
+        <i class="fa-brands fa-square-facebook"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-youtube"></i>
+        <i class="fa-brands fa-pinterest"></i>
+        <i class="fa-brands fa-instagram"></i>
+      </ul>
+    </div>
+    <div class="page-container">
+      <nav class="navbar">
+        <!-- THE UPPER NAVBAR OF CONTACTS -->
+        <div class="nav-contact">
+          <ul class="nav-socials">
+            <i class="fa-brands fa-square-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-pinterest"></i>
+            <i class="fa-brands fa-instagram"></i>
+          </ul>
+          <div class="nav-location">
+            <span
+              ><i class="fa-solid fa-location-dot"></i>184 Main Street East
+              8007</span
+            >
+          </div>
+          <div class="phone-clock">
+            <span><i class="fa-solid fa-phone"></i>+96170495664</span>
+            <span
+              ><i class="fa-regular fa-clock"></i>Mon-Fri 09.00 - 17.00</span
+            >
+          </div>
+        </div>
+        <!-- END OF NAV CONTACT -->
+        <div class="main-navBar">
+          <h1 class="title">TCarRental</h1>
+          <ul class="menu-list">
+            <li><a href="/">Home</a></li>
+            <li><a href="/cars">Cars</a></li>
+            <li><a href="/aboutUs">About Us</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/contactUs">Contact Us</a></li>
+            <li><a href="/faq">FAQ's</a></li>
+            <li><a href="/gallery">gallery</a></li>
+            <li><i class="fa-solid fa-right-from-bracket logoutBtn"></i></li>
+          </ul>
+          <div class="hamburger">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </div>
+      </nav>
+      <header class="header">
+        <h1>Find best Car & Limosine</h1>
+        <p>From as low as $10 per day with limited time offer discounts</p>
+        <!-- this from will take me to cars.html and ill pass values from here to the local storage -->
+        <form class="myForm" action="/cars">
+          <div class="searchBar">
+            <select name="brand" id="carBrandSelect">
+              <option value="Any Brand">Any Brand</option>
+              <option value="Audi">Audi</option>
+              <option value="BMW">BMW</option>
+              <option value="Lexus">Lexus</option>
+              <option value="Mercedes Benz">Mercedes Benz</option>
+              <option value="Mini">Mini</option>
+              <option value="Porsche">Porsche</option>
+            </select>
+            <select name="type" id="carTypeSelect">
+              <option value="Any Type">Any Type</option>
+              <option value="Coupe">Coupe</option>
+              <option value="Sedan">Sedan</option>
+              <option value="SUV">SUV</option>
+            </select>
+            <select name="price" id="carPriceSelect">
+              <option value="Price Low To Hight">Price Low To High</option>
+              <option value="Price Hight To Low">Price High To Low</option>
+            </select>
+
+            <button class="searchBtn btnRipple" id="searBtnMain" type="submit">
+              <span>Search</span>
+            </button>
+          </div>
+        </form>
+      </header>
+
+      <!-- END OF HEADER
+      START OF THE CARS SECTION -->
+      <!-- *********************** -->
+      <!-- FIRST SECTION SEARCH BY NAME -->
+      <section class="carByName carSearchSection">
+        <div class="carSearchSectionHeader">
+          <h1>First Class Car Rental & Limousine Services</h1>
+          <p>
+            We offer professional car rental & limousine services in our range
+            of high-end vehicles
+          </p>
+        </div>
+        <ul class="image-grid-ul" id="carByNameUl">
+          <!-- this list will be filled from js fetching the data from the backend -->
+        </ul>
+      </section>
+
+      <section class="game">
+        <div class="container">
+          <h2>Earn Rewards By Playing Our Game</h2>
+          <a href="https://microbitstest.com/cr/car-game/">Play Now</a>
+        </div>
+      </section>
+
+      <section class="carByType carSearchSection">
+        <div class="carSearchSectionHeader">
+          <h1>Find Car by Type</h1>
+          <p>
+            We offer professional car rental & limousine services in our range
+            of high-end vehicles
+          </p>
+        </div>
+        <ul class="image-grid-ul list-by-type-search"></ul>
+      </section>
+      <!-- END OF SEARCH BY TYPE SECTION 
+      *************************** -->
+
+      <section class="contactUsSection">
+        <div class="video-container">
+          <h1>Our Fleet, Your Fleet</h1>
+          <p>
+            We know the difference is in the details and that’s why our car
+            rental services, in the tourism and business industry, stand out for
+            their quality and good taste, to offer you an unique experience
+          </p>
+          <h2>Call Now (+961)-70-495664</h2>
+          <button class="contactUsBtn btnRipple">
+            <span>Send a Message</span>
+          </button>
+          <video
+            id="background-video"
+            preload="none"
+            playsinline
+            autoplay
+            loop
+            muted
+            poster="https://assets.codepen.io/6093409/river.jpg"
+          >
+            <!-- src of the video will be provided from the js -->
+          </video>
+        </div>
+      </section>
+      <!-- 
+      ******************
+
+      start of section why choose us
+
+
+      *********************** -->
+      <section class="whyChooseUs">
+        <h1>Why Choose US</h1>
+        <p>Explore our first class limousine & car rental services</p>
+
+        <div class="reasons">
+          <div>
+            <img
+              src="/imgs/svgs/smallCar.svg"
+              alt="small car"
+              class="filter-white"
+            />
+            <h2>Variety of Car Brands</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptates culpa itaque ad dollor.
+            </p>
+          </div>
+          <div>
+            <img
+              src="/imgs/svgs/face-wink.svg"
+              alt="face wink"
+              class="filter-white"
+            />
+            <h2>Best Rate Guarantee</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptates culpa itaque ad dollor.
+            </p>
+          </div>
+          <div>
+            <img
+              src="/imgs/svgs/heart.svg"
+              alt="small car"
+              class="filter-white"
+            />
+            <h2>Awesome Customer Support</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptates culpa itaque ad dollor.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- end of why choose us section 
+
+      *********************
+
+      START OF ARTICLES AND TIPS SECTION 
+
+      *********************** -->
+      <section class="articlesAndTips">
+        <div class="Tipsheader">
+          <h1>Articles & Tips</h1>
+          <p>Explore some of the best tips from around the world</p>
+        </div>
+        <div class="tips">
+          <div class="tip-container">
+            <div class="tip-image1"></div>
+            <div class="tip-text">
+              <p class="date"><span>January</span> 10,2022</p>
+              <h3 class="tip-heading">
+                What To Do if Your Rental Car Has Met With An Accident
+              </h3>
+              <p>
+                Meh synth Schlitz, tempor duis single-origin coffee ea next
+                level ethnic fingerstache...
+              </p>
+            </div>
+          </div>
+          <div class="tip-container">
+            <div class="tip-image2"></div>
+            <div class="tip-text">
+              <p class="date"><span>January</span> 12,2022</p>
+              <h3 class="tip-heading">
+                On The Trail of 6 Best Foods in North America
+              </h3>
+              <p>
+                Meh synth Schlitz, tempor duis single-origin coffee ea next
+                level ethnic fingerstache...
+              </p>
+            </div>
+          </div>
+          <div class="tip-container">
+            <div class="tip-image3"></div>
+            <div class="tip-text">
+              <p class="date"><span>January</span> 13,2022</p>
+              <h3 class="tip-heading">
+                Car Rental Mistakes That Can Cost You Big
+              </h3>
+              <p>
+                Meh synth Schlitz, tempor duis single-origin coffee ea next
+                level ethnic fingerstache...
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- *******************
+
+      START OF FOOTER 
+
+
+      ***************** -->
+      <footer class="footer">
+        <div class="footer-info">
+          <div>
+            <h2>About Us</h2>
+            <p>
+              Getting dressed up and traveling with good friends makes for a
+              shared, unforgettable experience.
+            </p>
+            <h1 class="title">TCarRental</h1>
+          </div>
+          <div class="footer-contactUs">
+            <h2>Contact Info</h2>
+            <div>
+              <i class="fa-solid fa-location-dot"></i>
+              <span>184 Main Street East 8007</span>
+            </div>
+            <div>
+              <i class="fa-solid fa-phone"></i>
+              <span>+96170495664</span>
+            </div>
+            <div>
+              <i class="fa-regular fa-clock"></i>
+              <span>Mon-Fri 09.00 - 17.00</span>
+            </div>
+          </div>
+          <div>
+            <ul class="footer-socials">
+              <i class="fa-brands fa-facebook-f"></i>
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-brands fa-youtube"></i>
+              <i class="fa-brands fa-pinterest"></i>
+              <i class="fa-brands fa-instagram"></i>
+            </ul>
+          </div>
+          <div class="Newsletter">
+            <h2>Newsletter</h2>
+            <p>Don't miss a thing! Sign up to receive daily deals</p>
+            <form id="subscibeForm">
+              <input
+                type="email"
+                placeholder="Your Email Address"
+                id="emailSubscribe"
+                required
+              />
+              <div>
+                <button id="subscribeBtn" class="btnRipple">
+                  <span>Subscribe</span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="footer-nav">
+          <ul class="footer-menu-list">
+            <li><a href="/cars">Cars</a></li>
+            <li><a href="/aboutUs">About Us</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/contactUs">Contact Us</a></li>
+            <li><a href="/faq">FAQ's</a></li>
+          </ul>
+          <div class="copyrights">
+            <p>
+              &copy; Copyright Grand Car Rental Theme - Theme by Tony Dagher
+            </p>
+          </div>
+        </div>
+      </footer>
+
+      <!-- end of page container -->
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  </body>
+</html>

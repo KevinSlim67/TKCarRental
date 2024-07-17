@@ -1,0 +1,105 @@
+:root {
+  --clr-primary-blue: rgb(16, 228, 243);
+  --clr-candy-violet: #88598b;
+  --clr-darker-primary-blue: rgb(9, 148, 158);
+  --clr-light-blue: rgba(55, 43, 224, 0.822);
+  --clr-lighter-blue: rgb(102, 99, 221);
+  --clr-violet: #800080;
+  --clr-grey-light: rgb(158, 152, 152);
+  --clr-grey-lighter: rgb(226, 221, 221);
+  --clr-grey-dark: rgb(141, 137, 137);
+  --clr-grey-darker: rgb(102, 100, 100);
+  --clr-grey-dark-opLow: rgba(141, 137, 137, 0.336);
+  --clr-black-lighter: rgb(53, 48, 48);
+  --clr-black-opLow: rgba(0, 0, 0, 0.918);
+  --clr-red-100: rgb(247, 31, 31);
+  --clr-red-200: rgb(236, 13, 13);
+  --clr-gold: #c59d5f;
+}
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: sans-serif;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* general styling */
+
+body {
+  font-size: 16px;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+/* p:not([class]) {
+  opacity: 0.7;
+  max-width: 32ch;
+} */
+
+p[data-width="wide"] {
+  max-width: 42ch;
+}
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
